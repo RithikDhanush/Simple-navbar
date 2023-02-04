@@ -1,0 +1,119 @@
+@import url();
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    
+  }
+  
+  html,
+  body {
+    height: 100vh;
+    background: linear-gradient(to bottom,black ,rgb(0, 0, 82));
+
+  }
+  
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card {
+    position: relative;
+  }
+  
+  .menu {
+    width: 67px;
+    height: 300px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px ;
+    overflow: hidden;
+    transition: 0.5s;
+    border: 2px solid black;
+  }
+  
+  .menu.active {
+    width: 225px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+  }
+  
+  .toggle {
+    position: absolute;
+    top: -20px;
+    right: -15px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    z-index: 1;
+    background: linear-gradient(to right,#ff416b,#ffd900);
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .line-1,
+  .line-2 {
+    height: 2px;
+    width: 15px;
+    background-color: #ffffff;
+    transition: 0.5s ease;
+  }
+  
+  .line-1 {
+    transform: rotate(-35deg) translate(5px, 8px);
+  }
+  
+  .line-2 {
+    transform: rotate(35deg) translate(-8px, 0px);
+  }
+  
+  .menu.active .line-1 {
+    transform: rotate(-45deg) translate(5px, 6px);
+  }
+  
+  .menu.active .line-2 {
+    transform: rotate(45deg) translate(-5px, 6px);
+  }
+  
+  ul {
+    position: relative;
+    width: 100%;
+  }
+  
+  li {
+    position: relative;
+    list-style: none;
+    height: 75px;
+    width: 100%;
+    padding-left: 23px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  li:hover {
+    background: linear-gradient(to right , rgb(11, 4, 43),rgb(255, 34, 108));
+  }
+  
+  span {
+    margin-left: 20px;
+    white-space: nowrap;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  .menu.active span {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  li:hover{
+    color: white;
+  }
